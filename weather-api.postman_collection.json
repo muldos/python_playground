@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "77fcc389-4898-4413-b2fe-51f89d97440c",
+		"name": "weather api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get paris weather",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "471a144f-3f01-4998-a50e-a128932a75b3",
+						"exec": [
+							"var data = JSON.parse(responseBody);",
+							"tests[\"HTTP Status code is 200\"] = responseCode.code === 200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.openweathermap.org/data/2.5/weather?q=paris,FR&APPID=1f8485698314cd7951c7b69e34af9133",
+					"protocol": "https",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "paris,FR"
+						},
+						{
+							"key": "APPID",
+							"value": "1f8485698314cd7951c7b69e34af9133"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get EU VAT",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e2b28c37-7eae-423e-93ab-a2a288a278fa",
+						"exec": [
+							"var data = JSON.parse(responseBody);",
+							"tests[\"HTTP Status code is 200\"] = responseCode.code === 200;",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://jsonvat.com/",
+					"protocol": "https",
+					"host": [
+						"jsonvat",
+						"com"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
