@@ -10,8 +10,7 @@ pipeline {
                 sh 'python --version'
             }
         }
-    }
-    stages {
+    
         stage('Test') {
           agent { 
             docker { 
@@ -20,6 +19,8 @@ pipeline {
           steps {
                 sh 'node --version'
           }
-        }
+        }    
+    
     }
+    
 }
