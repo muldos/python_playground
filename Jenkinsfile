@@ -11,4 +11,15 @@ pipeline {
             }
         }
     }
+    stages {
+        stage('Test') {
+          agent { 
+            docker { 
+                image 'node:latest'
+            }
+          steps {
+                sh 'node --version'
+          }
+        }
+    }
 }
