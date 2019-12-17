@@ -20,8 +20,8 @@ pipeline {
           }
           steps {
                 sh 'node --version'
-                sh 'pwd'
-                sh 'ls -al'
+                sh 'npm install -g newman'
+                sh 'newman run weather-api.postman_collection.json'
           }
         }    
     }
