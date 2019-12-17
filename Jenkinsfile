@@ -16,11 +16,10 @@ pipeline {
             docker { 
                 image 'node:latest'
             }
+          }
           steps {
                 sh 'node --version'
           }
         }    
-    
     }
-    
 }
