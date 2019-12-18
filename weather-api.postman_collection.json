@@ -14,7 +14,8 @@
 						"id": "471a144f-3f01-4998-a50e-a128932a75b3",
 						"exec": [
 							"var data = JSON.parse(responseBody);",
-							"tests[\"HTTP Status code is 200\"] = responseCode.code === 200;"
+							"tests[\"HTTP Status code is 200\"] = responseCode.code === 200;",
+							"tests[\"valid data found\"] = (data.name === \"Paris\");"
 						],
 						"type": "text/javascript"
 					}
